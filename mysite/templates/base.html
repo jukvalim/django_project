@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>
+            {% block title %}
+            {% if title %}{{ title }}{% else %}Site Title{% endif %}
+            {% endblock %}
+        </title>
+      
+        {% block basestyle %}
+            <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" >
+        {% endblock %}
+        
+        {% block style %}
+        {% endblock %}
+    </head>
+    <body>
+        
+        {% block content %}
+        {% endblock %}
+    
+        {% block basescripts %}
+            <script src="{{ STATIC_URL }}js/jquery-1.8.0{% if not DEBUG %}.min{% endif %}.js"></script>
+        {% endblock %}
+        
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>
