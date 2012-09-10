@@ -1,1 +1,0 @@
-tar --exclude='*.pyc' --exclude='.gitignore' --exclude='./.*' --exclude='./pkg' -cvzf pkg/project.tgz .
